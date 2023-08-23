@@ -147,24 +147,27 @@
         </div>
     </div>
     <div class="scare">
-        <video id="video" class="video" src="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4"></video>
+        <video id="video1" class="video" src="https://vdse.bdstatic.com/192d9a98d782d9c74c96f09db9378d93.mp4"></video>
+    </div>
+    <div class="scare">
+        <video id="video2" class="video" src="http://cdn.epoch.cyou/petal_20230801_233451.mp4"></video>
     </div>
     <script type="text/javascript">
         const video = document.getElementById("video");
         const overlay = document.getElementById("overlay");
         const declineButton = document.getElementById("decline-button");
         const acceptButton = document.getElementById("accept-button");
-        video.addEventListener("ended", function () {
-            window.location.href = "https://arcxingye.github.io/rr/qrcode";
-        });
         function buttonClick1(event) {
             event.preventDefault();
             overlay.hidden = true;
-            video.play();
+            video1.play();
             videoClick();
         }
         function buttonClick2(event) {
-            window.open("https://xingye.me/game/index.php");
+            event.preventDefault();
+            overlay.hidden = true;
+            video2.play();
+            videoClick();
         }
         function videoClick(event) {
             if (event) event.preventDefault();
